@@ -10,8 +10,15 @@ $(document).ready(new function() {
     guess = document.getElementById("inputfield");
     response = document.getElementById("response");
 
+    $("#inputfield").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#submitbutton").click();
+        }
+    });
+
     $("#submitbutton").click(function() {
         checkAnswer();
+        clearInput();
     });
 
     setNumbers();
@@ -20,6 +27,10 @@ $(document).ready(new function() {
 function setNumbers() {
     num1.innerHTML = Math.floor(Math.random() * 10) + 1;
     num2.innerHTML = Math.floor(Math.random() * 10) + 1;
+}
+
+function clearInput() {
+    onclick.innerHTML = document.getElementById('inputfield').value = '';
 }
 
 function checkAnswer() {
