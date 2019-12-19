@@ -9,3 +9,5 @@ I've added the following bits of code myself:
 -CSS styling of textbox and button
 -Added keyup/keycode === 13 java code in order to allow submission by enter button
 -function clearInput() - clears textbook following pressing enter or clicking submit
+-function "setNumbers();" updated to set a player score of correct and incorrect at 0
+-created function "setIncorrect();)
